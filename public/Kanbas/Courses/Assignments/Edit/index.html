@@ -1,0 +1,94 @@
+<select id="Editor">
+    <option selected value="#">SpeedGrader</option>
+    <option value="#">Option 1</option>
+    <option value="#">Option 2</option>
+</select>
+<hr>
+
+<h3> Assignment Name</h3>
+<form id="edit-assignment">
+    <p>
+        <input value="A1 - ENV + HTML" />
+        <br />
+        <textarea rows="10" cols="30">This is the Assignment description here.</textarea>
+    </p>
+
+    <p>
+        <label for="assignment-points">Points</label>
+        <br />
+        <input id="assignment-points" value="100" /><br />
+    </p>
+
+    <p>
+        <label for="assignment-group">Assignment Group</label>
+        <br />
+        <select id="assignment-group">
+            <option selected value="#">ASSIGNMENTS</option>
+            <option value="#">Option 1</option>
+            <option value="#">Option 2</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="display-grade-as">Display Grade as</label>
+        <br />
+        <select id="display-grade-as">
+            <option selected value="#">Percentage</option>
+            <option value="#">Option 1</option>
+            <option value="#">Option 2</option>
+        </select>
+    </p>
+
+    <!-- submission type -->
+    <p>
+        <label for="submission-type">Submission Type</label><br \>
+        <select id="submission-type">
+            <option selected value="#">Online</option>
+            <option value="#">Option 1</option>
+            <option value="#">Option 2</option>
+        </select> <br \>
+    </p>
+    <p>
+        <label>Online Entry Options</label>
+        <br \>
+        <input type="checkbox" value="TEXT-ENTRY" name="check-genre" id="chkbox-text-entry" />
+        <label for="chkbox-text-entry">Text Entry</label> <br />
+
+        <input type="checkbox" value="WEBSITE-URL" name="check-genre" id="chkbox-website-url" />
+        <label for="chkbox-website-url">Website URL</label> <br />
+
+        <input type="checkbox" value="MEDIA-RECORDING" name="check-genre" id="chkbox-media-recordings" />
+        <label for="chkbox-media-recordings">Media Recordings</label> <br />
+
+        <input type="checkbox" value="STUDENT-ANNOTATION" name="check-genre" id="chkbox-student-annotation" />
+        <label for="chkbox-student-annotation">Student Annotation</label> <br />
+
+        <input type="checkbox" value="FILE-UPLOADS" name="check-genre" id="chkbox-file-uploads" />
+        <label for="chkbox-file-uploads">File Uploads</label>
+    </p> 
+
+    <p>
+        <label>Assign</label> <br \>
+        <label for="assign-to">Assign to</label> <br \>
+        <input id="assign-to" value="Everyone" />
+    </p>
+
+    <p>
+        <label for="due">Due</label> <br \>
+        <input type="date" id="due" value="2024-01-21" />
+    </p>
+
+    <p>
+        <label for="avaliable-from">Avaliable from</label> <br \>
+        <input type="date" id="avaliable-from" value="2024-01-21" />
+    </p>
+
+    <p>
+        <label for="until">Until</label> <br \>
+        <input type="date" id="until" value="2024-01-21" />
+    </p>
+
+    <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
+    <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Save</button></a>
+
+</form>
