@@ -41,7 +41,6 @@
   margin: 5px;
   margin-top: 20px;
   margin-bottom: 0;
-  flex-direction: row-reverse;
 }
 
 .button-red {
@@ -54,5 +53,4 @@
   margin: 5px;
   margin-top: 20px;
   margin-bottom: 0;
-  flex-direction: row-reverse;
 }

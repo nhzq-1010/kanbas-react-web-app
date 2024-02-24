@@ -1,5 +1,5 @@
 import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -8,24 +8,30 @@ import Assignments from "./Assignments";
 import "./index.css";
 
 
-
 function Courses() {
   const { courseId } = useParams();
+  const { pathname } =useLocation();
   const course = courses.find((course) => course._id === courseId);
+  const listPos = ['Modules', 'Piazza' ,'Assignments','Grades']
+  const atModule = (pathname.includes("Modules")) ? " > Modules" : "" 
+  const atHome = (pathname.includes("Home")) ? " > Home" : "" 
+  const atAssign = (pathname.includes("Assignments")) ? " > Assignments" : "" 
+  const atGrade = (pathname.includes("Grades")) ? " > Grades" : "" 
+  const atPia = (pathname.includes("Piazza")) ? " > Piazza" : "" 
+
 
 
   return (
     <>
       <div className="Navbar-Style">
-        <HiMiniBars3 />Course {course?.name}
+      <HiMiniBars3 /> Courses {course?.name} {atModule}{atHome}{atAssign}{atGrade}{atPia}
       </div>
       <hr />
       <div>
         <CourseNavigation />
-
         <div
           className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "250px", top: "50px" }} >
+          style={{ left: "220px", top: "50px" }} >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home/>} />
