@@ -8,7 +8,7 @@ import Assignments from "./Assignments";
 import "./index.css";
 
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
   const { pathname } =useLocation();
   const course = courses.find((course) => course._id === courseId);
